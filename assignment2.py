@@ -84,6 +84,9 @@ for col in missing_cols:
 # Reorder columns in test_data to match training data
 test_data = test_data[x.columns]
 
+# Restrict test data to 744 rows
+test_data = test_data.head(744)
+
 # Predict on the test data
 # Return 0 or 1 predictions (not boolean T/F)
 # Return integers
