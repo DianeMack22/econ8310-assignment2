@@ -91,6 +91,7 @@ test_data = test_data.head(744)
 # Return 0 or 1 predictions (not boolean T/F)
 # Return integers
 pred = modelFit.predict_proba(test_data)[:, 1]
+pred = np.arry(pred, dtype=int)
 
 print(f"Generated {len(pred)} predictions.")
 print("Sample predictions:", pred[:10])
